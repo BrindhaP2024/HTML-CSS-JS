@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Table Demo</title>
+  </head>
+  <body>
+    <table border="3" width="100%" cellpadding="10" cellspacing="0">
+      <caption>
+        Monthly Sales Report
+      </caption>
+
+      <colgroup>
+        <col span="1" style="background-color: lightgray" />
+        <col span="2" style="background-color: lightblue" />
+        <col span="2" style="background-color: lightgreen" />
+        <col span="2" style="background-color: lightyellow" />
+        <col span="1" style="background-color: lightcoral" />
+      </colgroup>
+
+      <thead>
+        <tr>
+          <th scope="col" rowspan="2">Month</th>
+          <th scope="col" colspan="2">Sales</th>
+          <th scope="col" colspan="2">Region 1</th>
+          <th scope="col" colspan="2">Region 2</th>
+          <th scope="col" rowspan="2">Total Sales</th>
+        </tr>
+        <tr>
+          <th scope="col">Domestic</th>
+          <th scope="col">International</th>
+          <th scope="col">North</th>
+          <th scope="col">South</th>
+          <th scope="col">East</th>
+          <th scope="col">West</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">January</td>
+          <td>Rs. 1000</td>
+          <td>Rs. 1000</td>
+          <td>Rs. 600</td>
+          <td>Rs. 400</td>
+          <td>Rs. 500</td>
+          <td>Rs. 500</td>
+          <td>Rs. 2000</td>
+        </tr>
+        <tr>
+          <td>Rs. 1200</td>
+          <td>Rs. 1300</td>
+          <td>Rs. 700</td>
+          <td>Rs. 500</td>
+          <td>Rs. 600</td>
+          <td>Rs. 600</td>
+          <td>Rs. 2500</td>
+        </tr>
+        <tr>
+          <td rowspan="2">February</td>
+          <td>Rs. 1500</td>
+          <td>Rs. 1800</td>
+          <td>Rs. 900</td>
+          <td>Rs. 600</td>
+          <td>Rs. 800</td>
+          <td>Rs. 800</td>
+          <td>Rs. 3000</td>
+        </tr>
+        <tr>
+          <td>Rs. 1700</td>
+          <td>Rs. 1900</td>
+          <td>Rs. 1000</td>
+          <td>Rs. 700</td>
+          <td>Rs. 900</td>
+          <td>Rs. 1000</td>
+          <td>Rs. 3500</td>
+        </tr>
+        <tr>
+          <td rowspan="2">March</td>
+          <td>Rs. 1800</td>
+          <td>Rs. 2000</td>
+          <td>Rs. 1000</td>
+          <td>Rs. 800</td>
+          <td>Rs. 900</td>
+          <td>Rs. 1000</td>
+          <td>Rs. 4000</td>
+        </tr>
+        <tr>
+          <td>Rs. 2000</td>
+          <td>Rs. 2200</td>
+          <td>Rs. 1100</td>
+          <td>Rs. 900</td>
+          <td>Rs. 1000</td>
+          <td>Rs. 1100</td>
+          <td>Rs. 4200</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total</td>
+          <td>Rs. 9600</td>
+          <td>Rs. 5100</td>
+          <td>Rs. 3300</td>
+          <td>Rs. 3900</td>
+          <td>Rs. 4200</td>
+          <td>Rs. 13700</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
