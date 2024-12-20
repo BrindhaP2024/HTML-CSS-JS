@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Attributes Example</title>
+</head>
+<body>
+
+    <strong><H2>Boolean Attributes Example</H2></strong><!--  Not a case sensitive  -->
+    <!--'disabled' attribute -->
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" disabled><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <p>The Email input field is disabled and cannot be filled.</p>
+
+    <!--checked attribute -->
+    <form>
+        <h3>Choose Your Favorite Fruits:</h3>
+        <label for="apple">
+            <input type="checkbox" id="apple" name="fruit" checked> Apple
+        </label><br>
+        <label for="banana">
+            <input type="checkbox" id="banana" name="fruit"> Banana
+        </label><br>
+        <label for="grapes">
+            <input type="checkbox" id="grapes" name="fruit" checked> Grapes
+        </label><br>
+        <p>The Apple and Grapes options are pre-checked.</p>
+    </form>
+
+    <!--readonly attribute -->
+    <form>
+        <label for="readonly_input">Readonly Input:</label>
+        <input type="text" id="readonly_input" name="readonly_input" value="You can't edit me" readonly><br><br>
+        <p>The "Readonly Input" field cannot be edited.</p>
+    </form>
+
+    <!-- required attribute -->
+    <form>
+        <label for="username_required">Username:</label>
+        <input type="text" id="username_required" name="username_required" required><br><br>
+        <p>The Username field is required to submit the form.</p>
+    </form>
+
+    <!-- autofocus attribute -->
+    <form>
+        <label for="autofocus_input">Autofocus Input:</label>
+        <input type="text" id="autofocus_input" name="autofocus_input" autofocus><br><br>
+        <p>The cursor will automatically focus on the "Autofocus Input" field when the page loads.</p>
+    </form>
+
+    <!-- multiple attribute -->
+    <form>
+        <label for="Languages">Select Languages (you can select multiple):</label><br>
+        <select multiple size="4">
+            <option value="apple">C</option>
+            <option value="banana">C++</option>
+            <option value="cherry">Java</option>
+            <option value="grapes">ANGULAR</option>
+        </select><br><br>
+        <p>You can select multiple options from the list of Languages.</p>
+    </form>
+
+</body>
+</html>

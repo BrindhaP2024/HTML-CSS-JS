@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Global Attributes Example</title>
+</head>
+<body>
+
+    <!-- accesskey attribute: Provides a shortcut key to focus the header -->
+    <header id="main-header" accesskey="W">
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <!-- draggable attribute: Makes the section draggable -->
+    <section class="content" draggable="true">
+        <p>Drag this content around.</p>
+    </section>
+
+    <!-- title attribute: Provides additional information on hover -->
+    <button title="Click to submit" accesskey="s">Submit</button>
+
+    <!-- lang and autocapitalize attributes: Specifies language and capitalization rules -->
+    <p lang="en" autocapitalize="sentences" translate="yes">I am here.</p>
+
+    <!-- tabindex attribute: tab key is used to see the navigations  -->
+    <input type="text" tabindex="1" placeholder="First input" spellcheck="true">
+    <input type="text" tabindex="2" placeholder="Second input" spellcheck="true" autocorrect="on">
+
+    <!-- role attribute: Defines the role for accessibility -->
+    <div role="navigation">
+        <ul>
+            <li><a href="#home" accesskey="1">Home</a></li>
+            <li><a href="#services" accesskey="2">Services</a></li>
+            <li><a href="#contact" accesskey="3">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- hidden attribute: Hides the element -->
+    <p hidden>This text is hidden.</p>
+
+    <!-- writingmode attribute: Specifies the text writing mode -->
+    <input type="text" writingmode="vertical-rl" spellcheck="true" placeholder="Write here">
+
+    <!-- accesskey attribute: Provides a shortcut key to focus the link -->
+    <a href="#contact" id="anchor1" accesskey="c">Go to Contact</a>
+
+</body>
+</html>
