@@ -1,0 +1,175 @@
+/* External css simple example */
+p{
+    background-color: cadetblue;
+
+}
+h3{
+    background-color: brown;
+}
+
+h1,h2,h5,h6{
+    color: coral;
+    background-color: darkmagenta;
+}
+li{
+    background-color: darkgoldenrod;
+    color:deeppink;
+}
+/* selectors in css */
+
+/* Element Selectors */
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color:black;
+    font-weight: normal;
+}
+
+h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 36px;
+    color: darkmagenta;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Courier New', monospace;
+    font-size: 28px;
+    color: darkorange;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: 'Verdana', sans-serif;
+    font-size: 24px;
+    color: olive;
+    font-weight: lighter;
+}
+
+h4 {
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    color: teal;
+    font-weight: normal;
+}
+
+h5, h6 {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 18px;
+    color: coral;
+    font-weight: bold;
+}
+
+/* ID Selectors */
+#introduction {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+#story {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    color: #333;
+    font-weight: normal;
+    background-color: #f4f4f9;
+    padding: 15px;
+}
+
+/* Class Selectors */
+.intro-text {
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    color: purple;
+    font-weight: normal;
+}
+
+.highlight {
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    color: yellowgreen;
+    font-weight: bold;
+}
+
+/* Descendant Selectors */
+article p {
+    font-family: 'Times New Roman', serif;
+    font-size: 14px;
+    color: darkblue;
+    font-weight: 300;
+}
+
+aside ul li {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: navy;
+    font-weight: 500;
+}
+
+/* Child Selectors */
+section > h4 {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    color: darkred;
+    font-weight: bold;
+}
+
+footer > p {
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: normal;
+}
+
+/* Pseudo-classes */
+a:hover {
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    color: darkgreen;
+    font-weight: bold;
+}
+
+a:visited {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 18px;
+    color: darkslateblue;
+    font-weight: 600;
+}
+
+/* Pseudo-elements */
+h1::before {
+    content: "Welcome: ";
+    color: gold;
+    font-weight: bold;
+}
+
+h2::after {
+    content: " - The Adventure Continues";
+    color: firebrick;
+    font-weight: lighter;
+}
+
+/* Universal Selector */
+* {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Attribute Selectors */
+a[href^="https"] {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    color: rgb(149, 202, 85);
+    font-weight: bold;
+}
+
+input[type="text"] {
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    color: #333;
+    font-weight: normal;
+}

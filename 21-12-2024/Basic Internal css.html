@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags, Attributes</title>
+<style>
+    /* internal css */
+    header{
+        color: chartreuse;
+        font-family: cursive;
+        font-size: small;
+        font-style:initial;
+    }
+    p{
+        color: brown;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+</style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <h1>Learn HTML Tags and Attributes</h1>
+    <p>This page demonstrates various HTML elements and tags.</p>
+</header>
+
+<!-- Navigation Section -->
+<nav>
+    <ul>
+        <li><a href="#text">Text Formatting</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#audio">Audio</a></li>
+        <li><a href="#video">Video</a></li>
+    </ul>
+</nav>
+Quoted content<blockquote cite="URL">
+   
+    The tag in HTML is used to define a section that is quoted from another source.</blockquote>
+
+<!-- Text Formatting Section -->
+<section id="text">
+
+    <h2>Text Formatting Tags</h2>
+    <p><strong>Strong text:</strong> This is <strong>strong text</strong>, emphasized for importance.</p>
+    <p><i><u>Italic and underline text</u>:Italiced and underlined text here!</i></p>
+    <p><b>Bold text:This is bold one </b></p>
+    <p style="color:darkseagreen; font-family: fantasy;font-size: small;font-weight: 500;float: inline-end;"><i>Italiced one here</i></p>
+    <p><em>Emphasized text:</em> This text is <em>italicized</em> to indicate emphasis.</p>
+    <p><mark>Highlighted text:</mark> This text is <mark>highlighted</mark> for visibility.</p>
+    <p><del>Deleted text:</del> This text has been <del>deleted</del> from the document.</p>
+    <p><ins>Inserted text:</ins> This text has been <ins>inserted</ins> into the document.</p>
+    <p>The formula for water is H<sub>2</sub>O.</p>
+    <p>The Pythagorean theorem is a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>.</p>
+    <pre>THIS              IS THE PRE-FORMATTED TEXT WHICH PRESERVES WHITE SPACE</pre>
+    <p>The <abbr title="United States of America">USA</abbr> is located in <abbr title="North America">NA</abbr>.</p>
+    <abbr title="National Aeronautics and Space Administration">NASA</abbr>
+
+
+</section>
+
+<!-- Images Section -->
+<section id="images">
+    <h2>Image Tag</h2>
+    <p>Here is an example of an image:</p>
+    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/07/3D-Nature-Images-Free-Download.jpg" alt="Image" width="1240" height="500">
+    <p>The <code>&lt;img&gt;</code> tag is used to display images. It requires the <code>src</code> (source) and <code>alt</code> (alternative text) attributes.</p>
+</section>
+
+<!-- Audio Section -->
+<section id="audio">
+    <h2>Audio Tag</h2>
+    <p>Here is an example of an audio file embedded in the page:</p>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <p>The <code>audio</code> tag is used for embedding audio files. The <code>controls</code> attribute allows users to play, pause, and adjust volume.</p>
+</section>
+
+<!-- Video Section -->
+<section id="video">
+    <h2>Video Tag</h2>
+    <p>Here is an example of a video file embedded in the page:</p>
+    <video width="1240" height="500" controls>
+        <!-- width="320" height="240"  -->
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>The <code>&lt;video&gt;</code> tag is used for embedding video files. The <code>controls</code> attribute provides video playback options like play/pause, volume, etc.</p>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 My Website | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
