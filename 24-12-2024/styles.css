@@ -1,0 +1,11 @@
+h1 {
+    color: red; 
+}
+/* Next sibling coordinator '+' */
+h1+p{
+    color: chocolate;
+}
+h1 + p + p {
+    color: blue; 
+    font-weight: bold;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CSS States</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color:red;
+        }
+        p {
+            font-size: 20px;
+            color: #000;
+            transition: font-size 0.3s ease, color 0.3s ease;
+        }
+
+        p:hover {
+            color: orange; 
+            font-size: 24px; 
+        }
+
+        p:focus {
+            color: #4CAF50;
+        }
+
+        p:active {
+            color: #ff1493; 
+            font-size: 22px; 
+        }
+
+
+        a:visited {
+            color: #8a2be2; 
+        }
+
+        input[type="checkbox"]:checked + label {
+            color: #008000; 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <p tabindex="0">This is a simple paragraph. Hover over it, click it, or focus on it to see changes!</p>
+    
+    <input type="checkbox" id="accept" />
+    <label for="accept">I accept the terms and conditions</label>
+
+    <a href="https://chromewebstore.google.com/" target="_blank">Click this link to visit google.com</a>
+    
+</body>
+</html>

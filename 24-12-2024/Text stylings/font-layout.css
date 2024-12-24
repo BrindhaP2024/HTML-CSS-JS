@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.intro {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.basic-text {
+    font-size: 1.2em;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.underline-text {
+    text-decoration: underline;
+}
+
+.line-through-text {
+    text-decoration: line-through;
+}
+
+.overline-text {
+    text-decoration: overline;
+}
+
+.text-shadow {
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    text-shadow: 4px -4px 5px red;
+
+}
+
+.multiple-shadows {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 0, 0, 0.5);
+}
+
+.uppercase-text {
+    text-transform: uppercase;
+}
+
+.capitalize-text {
+    text-transform: capitalize;
+}
+
+.lowercase-text {
+    text-transform: lowercase;
+}
+
+.letter-spacing {
+    letter-spacing: 2px;
+}
+
+.word-spacing {
+    word-spacing: 5px;
+}
+
+.line-height {
+    line-height: 1.8;
+}
+
+.advanced-text-shadow {
+    text-shadow: 4px 4px 6px rgb(253, 60, 221);
+}

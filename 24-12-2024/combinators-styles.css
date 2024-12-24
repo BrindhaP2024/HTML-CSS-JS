@@ -1,0 +1,26 @@
+/* Next Sibling Selector */
+h1 + p {
+    color: blue;
+    font-weight: bold;
+}
+
+/* Child Selector */
+div.parent > p {
+    color: green;
+}
+
+/* Subsequent Sibling Selector */
+h2 ~ p {
+    color: red;
+}
+
+/* Descendant Combinator */
+div.ancestor .descendant p {
+    color: purple;
+}
+
+/* p::first-line {
+    font-weight: bolder;
+    color:darkturquoise;
+} */
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position and Float Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .static {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: lightcoral;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: lightgreen;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: lightyellow;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 20px;
+            background-color: lightpink;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .float-left {
+            float: left;
+            background-color: lightgray;
+            padding: 20px;
+            margin-right: 20px;
+            width: 150px;
+        }
+
+        .float-right {
+            float: right;
+            background-color: lightblue;
+            padding: 20px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="static">Static Position</div>
+
+    <div class="relative">Relative Position</div>
+
+    <div class="absolute">Absolute Position</div>
+
+    <div class="sticky">Sticky Position</div>
+
+    <div class="float-left">Float Left</div>
+    <div class="float-right">Float Right</div>
+
+    <div style="clear: both;"></div>
+
+    <div class="fixed">Fixed Position (always at the bottom)</div>
+
+</body>
+
+</html>
