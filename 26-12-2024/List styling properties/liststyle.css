@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+.image-list {
+    list-style-type: lower-alpha;
+    padding-left: 40px;
+}
+
+.image-list li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.image-ordered-list {
+    list-style-type: none;
+    list-style-image: url('listimage1.gif');
+    padding-left: 40px;
+}
+
+.image-ordered-list li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #444;
+}

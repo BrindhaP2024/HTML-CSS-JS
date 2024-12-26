@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+    background-color: whitesmoke;
+}
+
+.shape {
+    animation-name: move, scale, rotate;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 0s;
+    animation-fill-mode: backwards;
+}
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 0;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid green;
+}
+
+.rectangle {
+    width: 150px;
+    height: 75px;
+    background-color: yellow;
+}
+
+.ellipse {
+    width: 150px;
+    height: 100px;
+    background-color: purple;
+    border-radius: 50%;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(200px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.square {
+    animation-delay: 0s;
+}
+
+.circle {
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+
+.triangle {
+    animation-delay: 2s;
+    animation-direction: reverse;
+}
+
+.rectangle {
+    animation-delay: 3s;
+
+}
+
+.ellipse {
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}

@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+.image-list {
+    list-style-type: none;
+    padding-left: 40px;
+}
+
+.image-list li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.image-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('writing-tool-svgrepo-com.png');
+    background-size: 12px 12px;
+    width: 12px;
+    height: 12px;
+}
+
+.ordered-list {
+    list-style-type: upper-roman;
+    padding-left: 40px;
+}
+
+.positioned-list {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 40px;
+}
