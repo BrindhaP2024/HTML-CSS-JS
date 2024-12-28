@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events and Methods Example</title>
+    <link rel="stylesheet">
+
+    </link>
+</head>
+
+<body>
+    <h2>DOM Events, Methods, and Properties Example</h2>
+
+    <button id="clickButton">Click Me</button>
+    <p id="mouseoverPara">Hover over me!</p>
+    <input type="text" id="textInput" placeholder="Type something">
+    <button id="focusButton">Focus on Input</button>
+    <button id="toggleButton">Toggle Visibility</button>
+    <div id="colorBox" style="width: 100px; height: 100px; background-color: lightblue;"></div>
+    <p id="output">Output will appear here...</p>
+
+    <script>
+        // References to DOM elements
+        const clickButton = document.getElementById('clickButton');
+        const mouseoverPara = document.getElementById('mouseoverPara');
+        const textInput = document.getElementById('textInput');
+        const focusButton = document.getElementById('focusButton');
+        const toggleButton = document.getElementById('toggleButton');
+        const colorBox = document.getElementById('colorBox');
+        const output = document.getElementById('output');
+
+        clickButton.addEventListener('click', () => {
+            output.textContent = "Button was clicked!";
+            output.style.color = 'green';
+        });
+
+
+        mouseoverPara.addEventListener('mouseover', () => {
+            output.textContent = "You hovered over the paragraph!";
+            output.style.color = 'blue';
+        });
+
+        textInput.addEventListener('keydown', (event) => {
+            output.textContent = `Key pressed: ${event.key}`;
+        });
+
+
+        textInput.addEventListener('change', () => {
+            output.textContent = `Input changed to: ${textInput.value}`;
+        });
+
+
+        focusButton.addEventListener('click', () => {
+            textInput.focus();
+            output.textContent = "Input field is focused!";
+        });
+
+        textInput.addEventListener('blur', () => {
+            output.textContent = "Input field lost focus!";
+        });
+
+        toggleButton.addEventListener('click', () => {
+            colorBox.classList.toggle('hidden');
+            if (colorBox.classList.contains('hidden')) {
+                output.textContent = "Box is now hidden!";
+            } else {
+                output.textContent = "Box is visible!";
+            }
+        });
+
+        textInput.setAttribute('maxlength', '15');
+        output.textContent = `Max Length of Input: ${textInput.getAttribute('maxlength')}`;
+
+        // Instance Method Example: classList
+        clickButton.addEventListener('click', () => {
+            clickButton.classList.add('highlight');
+            output.textContent = "Class 'highlight' added to the button!";
+        });
+
+        // Instance Property Example: innerHTML
+        setTimeout(() => {
+            colorBox.innerHTML = "<strong>This box is updated with HTML!</strong>";
+            output.textContent = "innerHTML of colorBox updated!";
+        }, 2000);
+
+        // Instance Property Example: style
+        setTimeout(() => {
+            colorBox.style.backgroundColor = 'lightcoral';
+            output.textContent = "Box color changed using 'style' property!";
+        }, 3000);
+
+        // Event Example: focus
+        textInput.addEventListener('focus', () => {
+            output.textContent = "Focused on text input!";
+        });
+
+    </script>
+</body>
+
+</html>

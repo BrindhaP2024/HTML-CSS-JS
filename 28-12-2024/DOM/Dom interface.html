@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM & JavaScript Examples</title>
+</head>
+<body>
+    <div>
+        <p id="start">Start Node</p>
+        <p id="end">End Node</p>
+        <div id="element" id="elementExample">Element for Attribute</div>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <div id="targetNode">Target for MutationObserver</div>
+        <button id="button">Click Me</button>
+        <p id="listElement" class="active">List Element</p>
+    </div>
+
+    <script>
+        // 1. AbortController and AbortSignal
+        const controller = new AbortController(); //constructor
+        const signal = controller.signal;
+
+        setTimeout(() => {
+            console.log("Fetching data...");
+            controller.abort(); // aborts fetch after some time
+        }, 1000);
+
+        signal.addEventListener('abort', () => {
+            console.log('The operation was aborted.');
+        });
+
+        // 2. AbstractRange
+        const range = document.createRange();
+        const startNode = document.getElementById('start');
+        const endNode = document.getElementById('end');
+        range.setStart(startNode, 0);
+        range.setEnd(endNode, 1);
+        console.log(range.toString());
+
+        // 3. Attr
+        const element = document.getElementById('element');
+        const attribute = element.getAttributeNode('id');
+        console.log(attribute.name, attribute.value);
+
+        // 4. CDATASection
+        const parser = new DOMParser();
+        const doc = parser.parseFromString('<![CDATA[This is a CDATA section]]>', 'text/xml');
+        const cdata = doc.firstChild;
+        console.log(cdata.nodeValue);
+
+        // // 5. CharacterData
+        // const textNode = document.createTextNode('Some text');
+        // console.log(textNode.data);  // Access the data of the text node
+
+        // 6. Comment
+        const comment = document.createComment("This is a comment");
+        document.body.appendChild(comment);
+        console.log(comment.data);
+
+        // 7. CustomEvent
+        const customEvent = new CustomEvent('myCustomEvent', { detail: { info: 'This is custom data!' } });
+        document.addEventListener('myCustomEvent', (e) => {
+            console.log(e.detail.info);
+        });
+        document.dispatchEvent(customEvent);
+
+        // 8. Document
+        const docElement = document.documentElement;
+        console.log(docElement.nodeName);
+
+        // 9. DocumentFragment
+        const fragment = document.createDocumentFragment();
+        const list = document.createElement('ul');
+        for (let i = 0; i < 3; i++) {
+            const item = document.createElement('li');
+            item.textContent = `Item ${i + 1}`;
+            fragment.appendChild(item);
+        }
+        document.body.appendChild(fragment);  // appends all items at once
+
+        // 10. DocumentType
+        const docType = document.doctype;
+        console.log(docType.name);
+
+        // 11. DOMError (Deprecated)
+        const error = new DOMError('Invalid Error', 'Error Message');
+        console.log(error.name);
+
+        // 12. DOMException
+        try {
+            throw new DOMException("Invalid operation", "TypeError");
+        } catch (e) {
+            console.log(e.message);
+        }
+
+        // 13. DOMImplementation
+        const impl = document.implementation;
+        console.log(impl.hasFeature("HTML", "1.0")); // Check feature support
+
+        // 14. DOMParser
+        const htmlString = "<div><p>Hello, world!</p></div>";
+        const parsedDoc = new DOMParser().parseFromString(htmlString, "text/html");
+        console.log(parsedDoc.body.innerHTML);
+
+        // 15. DOMPoint
+        const point = new DOMPoint(10, 20);
+        console.log(point.x, point.y);
+
+        // 16. DOMPointReadOnly
+        const readOnlyPoint = new DOMPointReadOnly(5, 15);
+        console.log(readOnlyPoint.x, readOnlyPoint.y);
+
+        // 17. DOMRect
+        const rect = new DOMRect(0, 0, 100, 200);
+        console.log(rect.width, rect.height);
+
+        // 18. DOMTokenList
+        const listElement = document.getElementById('listElement');
+        const classList = listElement.classList;
+        console.log(classList.contains('active'));  // Check if 'active' class exists
+
+        // 19. Element
+        const divElement = document.createElement('div');
+        divElement.textContent = "Hello, Element!";
+        document.body.appendChild(divElement);
+        console.log(divElement.nodeName);
+
+        // 20. Event
+        const event = new Event('click');
+        const btn = document.getElementById('button');
+        btn.addEventListener('click', () => {
+            console.log("Button clicked!");
+        });
+        btn.dispatchEvent(event);
+
+        // 21. EventTarget
+        const eventTarget = new EventTarget();
+        eventTarget.addEventListener('myEvent', () => {
+            console.log("Event Targeted!");
+        });
+        eventTarget.dispatchEvent(new Event('myEvent'));
+
+        // 22. HTMLCollection
+        const items = document.getElementsByTagName('li');
+        console.log(items[0].textContent);
+
+        // 23. MutationObserver
+        const observer = new MutationObserver((mutationsList) => {
+            mutationsList.forEach((mutation) => {
+                console.log(mutation.type);
+            });
+        });
+
+        const targetNode = document.getElementById('targetNode');
+        observer.observe(targetNode, { attributes: true });
+
+        // 24. MutationRecord
+        const record = new MutationRecord();
+        console.log(record);
+
+        // 25. NamedNodeMap
+        const attributes = document.getElementById('element').attributes;
+        console.log(attributes.getNamedItem('id').value);
+
+        // 26. Node
+        const newNode = document.createElement('p');
+        newNode.textContent = "This is a new node!";
+        document.body.appendChild(newNode);
+
+        // 27. NodeIterator
+        const nodeIterator = document.createNodeIterator(document.body, NodeFilter.SHOW_TEXT, {
+            acceptNode: (node) => NodeFilter.FILTER_ACCEPT
+        });
+        const firstNode = nodeIterator.nextNode();
+        console.log(firstNode.nodeValue);
+
+        // 28. NodeList
+        const nodeList = document.querySelectorAll('li');
+        nodeList.forEach((li) => console.log(li.textContent));
+
+        // 29. ProcessingInstruction
+        const pi = document.createProcessingInstruction('xml-stylesheet', 'href="style.css" type="text/css"');
+        console.log(pi.target, pi.data);
+
+        // 30. Range
+        const rangeObj = document.createRange();
+        rangeObj.setStart(document.body, 0);
+        rangeObj.setEnd(document.body, 1);
+        console.log(rangeObj.toString());
+
+        // 31. StaticRange
+        const staticRange = new StaticRange({
+            startContainer: document.body,
+            startOffset: 0,
+            endContainer: document.body,
+            endOffset: 1
+        });
+        console.log(staticRange.toString());
+
+        // 32. Text
+        const textNode = document.createTextNode("Some sample text.");
+        console.log(textNode.nodeValue);
+
+        // 33. TextDecoder
+        const buffer = new TextEncoder().encode('Hello, World!');
+        const decoder = new TextDecoder();
+        console.log(decoder.decode(buffer));
+
+        // 34. TextEncoder
+        const encoder = new TextEncoder();
+        const encodedText = encoder.encode("Hello");
+        console.log(encodedText);
+
+        // 35. TimeRanges
+        const timeRanges = new TimeRanges();
+        timeRanges.add(0, 5);  // Adds a range from 0 to 5 seconds
+        console.log(timeRanges.start(0), timeRanges.end(0));
+
+        // 36. TreeWalker
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT, {
+            acceptNode: function(node) {
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        });
+        console.log(walker.nextNode().nodeName);  // Iterates over elements in the body
+
+        // 37. XMLDocument
+        const xmlString = "<book><title>JavaScript</title><author>John Doe</author></book>";
+        const xmlDoc = new DOMParser().parseFromString(xmlString, "application/xml");
+        console.log(xmlDoc.getElementsByTagName('title')[0].textContent);  // Access XML node
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow DOM Example</title>
+</head>
+<body>
+    <h1>Shadow DOM Example</h1>
+    <my-element></my-element>
+
+    <script>
+        class MyElement extends HTMLElement {
+            constructor() {
+                super();
+                // Attach a shadow root to the element.
+                const shadow = this.attachShadow({ mode: 'close' }); //open to display in browser
+
+                // Create some content inside the shadow root.
+                const wrapper = document.createElement('div');
+                wrapper.setAttribute('class', 'wrapper');
+                wrapper.innerHTML = `
+                    <style>
+                        .wrapper {
+                            background-color: lightgrey;
+                            padding: 10px;
+                            border: 1px solid black;
+                        }
+                    </style>
+                    <p>This is inside the shadow DOM.</p>
+                `;
+
+                // Append the wrapper to the shadow root.
+                shadow.appendChild(wrapper);
+            }
+        }
+
+        // Define the new element.
+        customElements.define('my-element', MyElement);
+    </script>
+</body>
+</html>

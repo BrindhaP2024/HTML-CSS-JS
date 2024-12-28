@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG DOM Example</title>
+</head>
+<body>
+    <svg width="500" height="500" id="svgCanvas">
+        <circle id="myCircle" cx="100" cy="100" r="40" fill="green" />
+    </svg>
+
+    <script>
+       
+        const circle = document.getElementById('myCircle');
+
+        circle.setAttribute('fill', 'blue');
+
+        // Change the radius
+        circle.setAttribute('r', 175);
+
+        // Change the position of the circle
+        circle.setAttribute('cx', 200);
+        circle.setAttribute('cy', 200);
+
+        circle.addEventListener('click', function() {
+            circle.setAttribute('fill', 'red');
+        });
+
+        console.log('Circle properties:', circle.getAttribute('cx'), circle.getAttribute('cy'), circle.getAttribute('r'), circle.getAttribute('fill'));
+    </script>
+</body>
+</html>
