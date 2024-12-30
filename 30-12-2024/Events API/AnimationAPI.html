@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation API</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color:blueviolet;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+
+    <script>
+        // Define keyframes for animation
+        const keyframes = [
+            { transform: 'translateX(0px)', opacity: 1 },
+            { transform: 'translateX(300px)', opacity: 0.5 },
+            { transform: 'translateX(0px)', opacity: 1 }
+        ];
+
+        // Define animation options (timing, duration, etc.)
+        const timing = {
+            duration: 4000,                  // Animation duration in milliseconds
+            iterations: Infinity,            // The number of times the animation should run
+            direction: 'alternate',          // Play the animation forwards and then backwards
+            easing: 'ease-in-out',           // Easing function IS for smooth animation
+            delay: 1000,                     // Delay before the animation starts
+            fill: 'forwards',                // Keeps the final state after animation ends
+        };
+
+        const box = document.getElementById('box');
+
+        // Constructor here 
+        const animation = new Animation(new KeyframeEffect(box, keyframes, timing),
+            document.timeline
+        );
+
+        animation.play();
+
+        // Control animation after playing
+        setTimeout(() => {
+            animation.pause();
+        }, 3000);
+
+        setTimeout(() => {
+            animation.play();
+        }, 5000);
+
+        setTimeout(() => {
+            animation.reverse();
+        }, 8000);
+
+        setTimeout(() => {
+            animation.cancel();
+        }, 10000);
+
+        animation.onfinish = () => {
+            console.log('Animation finished!');
+        };
+
+        animation.oncancel = () => {
+            console.log('Animation cancelled!');
+        };
+
+        animation.onpause = () => {
+            console.log('Animation paused!');
+        };
+''
+        animation.onplay = () => {
+            console.log('Animation playing!');
+        };
+
+    </script>
+</body>
+</html>
