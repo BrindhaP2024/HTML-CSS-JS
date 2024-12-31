@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <script src="Input.js"></script>
+</head>
+
+<body>
+    <h1>Input Event</h1>
+
+    <!-- cancel event -->
+    <label for="file">Select a file. Or don't.</label>
+    <input type="file" id="file" name="file" />
+    <div id="fileResult"></div>
+
+    <!-- invalid event -->
+    <form>
+        <label>Enter a number between 1 and 10:
+            <input type="number" min="1" max="10" required />
+        </label>
+        <input type="submit" value="Submit" />
+    </form>
+    <div id="invalidLog"></div>
+
+    <!-- search event -->
+    <input type="search" id="search" placeholder="Search..." />
+    <div id="searchResult"></div>
+
+    <!-- select event -->
+    <input type="text" id="selectInput" value="Try selecting some text in this element." />
+    <p id="selectLog"></p>
+
+    <!-- selectionchange event -->
+    <input type="text" id="selectionInput" value="Select some text here." />
+    <div>Selection start: <span id="start"></span></div>
+    <div>Selection end: <span id="end"></span></div>
+    <div>Selection direction: <span id="direction"></span></div>
+
+
+</body>
+
+</html>
