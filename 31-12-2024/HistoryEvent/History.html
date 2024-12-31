@@ -1,0 +1,35 @@
+
+<button id="backButton">Go Back</button>
+<button id="forwardButton">Go Forward</button>
+<button id="changeHash">Change Hash</button>
+
+<script>
+    window.addEventListener('popstate', (event) => {
+        console.log('popstate fired. Current state:', event.state);
+    });
+
+    window.addEventListener('hashchange', () => {
+        console.log('Hash has changed:', location.hash);
+    });
+
+    window.addEventListener('pageshow', () => {
+        console.log('Page is visible after navigation');
+    });
+
+    window.addEventListener('pagehide', () => {
+        console.log('Page is being hidden');
+    });
+
+    document.getElementById('changeHash').addEventListener('click', () => {
+        location.hash = '#newHash';
+        history.pushState({ page: 3 }, 'Page 3', '#page3');
+    });
+
+    document.getElementById('backButton').addEventListener('click', () => {
+        history.back();
+    });
+
+    document.getElementById('forwardButton').addEventListener('click', () => {
+        history.forward();
+    });
+</script>

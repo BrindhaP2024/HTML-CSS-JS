@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus event</title>
+</head>
+<body>
+    <div id="box1" tabindex="0"
+    style="width: 200px; height: 100px; background-color:brown; text-align: center; line-height: 100px;">
+    Click or Tab to Focus
+</div>
+<div id="message" style="margin-top: 10px; font-size: 16px;"></div>
+</body>
+<script>
+    const box1 = document.getElementById('box1');
+    const message = document.getElementById('message');
+
+    box1.addEventListener('focus', () => {
+        message.textContent = 'The box has gained focus!';
+        console.log('Focusing the box');
+        
+    });
+
+    box1.addEventListener('blur', () => {
+        message.textContent = 'The box has lost focus!';
+        console.log("Lost the focus");
+        
+    });
+
+    box1.addEventListener('focusin', () => {
+        message.textContent = 'The box is about to gain focus!';
+        console.log("The box is about to gain focus!");
+        
+    });
+
+    box1.addEventListener('focusout', () => {
+        message.textContent = 'The box is about to lose focus!';
+        console.log('The box is about to lose focus!');
+        
+    });
+</script>
+</html>
+
