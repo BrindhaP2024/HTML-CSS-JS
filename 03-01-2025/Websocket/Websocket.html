@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Example - Localhost</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input {
+            margin-right: 10px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>WebSocket Example - Localhost</h1>
+
+    <input type="text" id="messageInput" placeholder="Enter message" />
+    <button id="sendMessageButton">Send Message</button>
+
+    <div id="result"></div>
+
+    <script>
+        // Create a WebSocket connection to the local WebSocket server (update this to your local server URL)
+        const socket = new WebSocket('ws://localhost:5500'); // Update the WebSocket URL
+
+        // Select DOM elements
+        const messageInput = document.getElementById('messageInput');
+        const sendMessageButton = document.getElementById('sendMessageButton');
+        const resultDiv = document.getElementById('result');
+
+        // When the WebSocket connection is opened
+        socket.onopen = () => {
+            console.log('Connected to WebSocket server');
+            resultDiv.textContent = 'Connected to WebSocket server';
+        };
+
+        // When a message is received from the WebSocket server
+        socket.onmessage = (event) => {
+            console.log('Received:', event.data);
+            resultDiv.textContent = `Server says: ${event.data}`;
+        };
+
+        // When there is an error with the WebSocket
+        socket.onerror = (error) => {
+            console.error('WebSocket Error:', error);
+            resultDiv.textContent = 'Error occurred with WebSocket connection.';
+        };
+
+        // Event listener for the "Send Message" button
+        sendMessageButton.addEventListener('click', () => {
+            const message = messageInput.value;
+
+            if (message) {
+                // Check if WebSocket is OPEN before sending
+                if (socket.readyState === WebSocket.OPEN) {
+                    socket.send(message);
+                    resultDiv.textContent = 'Sending message to server...';
+                } else {
+                    resultDiv.textContent = 'WebSocket is not open yet!';
+                }
+            } else {
+                resultDiv.textContent = 'Please enter a message.';
+            }
+        });
+
+        // Handle WebSocket close event
+        socket.onclose = () => {
+            console.log('WebSocket connection closed');
+            resultDiv.textContent = 'WebSocket connection closed.';
+        };
+    </script>
+
+</body>
+
+</html>

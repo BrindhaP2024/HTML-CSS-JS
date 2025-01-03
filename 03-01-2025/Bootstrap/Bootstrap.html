@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Product Page</title>
+
+    <!-- Bootstrap 5 CSS (can be fetched from a CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS (Optional) -->
+    <style>
+        .product-img {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .product-card {
+            margin-bottom: 30px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SkinCare Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container-fluid bg-primary text-white py-5">
+        <div class="container text-center">
+            <h1>Explore Our Premium Skincare Collection</h1>
+            <p>Care for your skin with the best products</p>
+        </div>
+    </div>
+
+    <!-- Product Carousel -->
+    <div id="productCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="" class="d-block w-100"
+                    alt="Skincare Product 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Hydrating Moisturizer</h5>
+                    <p>Keep your skin soft and hydrated all day.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400?text=Skincare+Product+2" class="d-block w-100"
+                    alt="Skincare Product 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Gentle Face Cleanser</h5>
+                    <p>Remove impurities and refresh your skin.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400?text=Skincare+Product+3" class="d-block w-100"
+                    alt="Skincare Product 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Anti-Aging Serum</h5>
+                    <p>Reduce fine lines and rejuvenate your skin.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100 product-card">
+                    <img src="https://via.placeholder.com/400x300?text=Product+1" class="card-img-top product-img"
+                        alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Hydrating Moisturizer</h5>
+                        <p class="card-text">Moisturize your skin with long-lasting hydration.</p>
+                        <p class="text-muted">$29.99</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 product-card">
+                    <img src="https://via.placeholder.com/400x300?text=Product+2" class="card-img-top product-img"
+                        alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Gentle Face Cleanser</h5>
+                        <p class="card-text">Cleanses your skin without stripping its natural oils.</p>
+                        <p class="text-muted">$19.99</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 product-card">
+                    <img src="https://via.placeholder.com/400x300?text=Product+3" class="card-img-top product-img"
+                        alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Anti-Aging Serum</h5>
+                        <p class="card-text">Fight wrinkles and fine lines with our powerful serum.</p>
+                        <p class="text-muted">$49.99</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="container my-5">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2025 SkinCare Shop. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js (can be fetched from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
