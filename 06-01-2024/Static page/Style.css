@@ -1,0 +1,145 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: radial-gradient(#b95f5f 25%, #c7c7c7 78%);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.main {
+    height: 1350px;
+    width: 800px;
+    background-color: white;
+    box-shadow: 5px 7px 15px 5px #b9b6b6;
+    margin: 20px auto;
+}
+
+.top-section {
+    background-color: darkcyan;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile {
+    width: 180px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 05px rgba(195, 214, 87, 0.5);
+}
+
+.p1 {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+#p1 {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+}
+
+
+.p1 span {
+    font-weight: 100;
+    color: red;
+}
+
+.p2 {
+    font-size: 20px;
+    color: #c7c7c7;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.col-div-4 {
+    width: 35%;
+    float: left;
+}
+
+.col-div-8 {
+    width: 62%;
+    float: left;
+}
+
+.line {
+    border-left: 1px solid #c7c7c7;
+    height: 955px;
+    width: 2%;
+    margin-top: 30px;
+    float: left;
+}
+
+.content-box {
+    padding: 20px;
+}
+
+.head {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(2, 65, 65);
+}
+
+.p3,
+.p-4 {
+    color: blueviolet;
+    margin-bottom: -5px;
+}
+
+.head2 {
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fa {
+    color: purple;
+}
+
+.skills {
+    margin-left: -20\px;
+    margin-bottom: 0px;
+}
+
+.skills li {
+    padding: 3px;
+}
+
+.skills li span {
+    color: palevioletred;
+    font-size: 14px;
+}
+
+#p-5 {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: Underline;
+}
+
+.Description {
+    color: blueviolet;
+    margin-bottom: 5px;
+    font-size: 14px;
+
+}
+
+h5 {
+    color: blue;
+    margin: 3px 0px;
+    font-size: 14px;
+    width: 96%;
+    justify-content: center;
+}
+
+.final {
+    color: darkmagenta;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
