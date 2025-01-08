@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UTC String Example</title>
+</head>
+<body>
+    <p id="utcTime"></p>
+
+    <script>
+        const date = new Date();
+        const utcString = date.toUTCString();
+        document.getElementById("utcTime").innerText = utcString;
+    </script>
+</body>
+</html>
