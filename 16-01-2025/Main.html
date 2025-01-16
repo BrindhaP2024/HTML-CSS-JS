@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache API Example</title>
+</head>
+<body>
+
+    <h1>Cache API Example</h1>
+    <button id="cacheButton">Cache Resources</button>
+
+    <script>
+        async function cacheapiExample() {
+            try {
+                // Open or create a cache named 'my-cache'
+                const cache = await caches.open('my-cache');
+                console.log('Cache opened or created:', cache);
+
+                // Add a URL to the cache (in this case, a URL from MDN)
+                await cache.add('https://www.javatpoint.com/html-web-workers');
+                console.log('Resource cached.');
+
+                // Try to match a specific resource from the cache
+                const response = await cache.match('https://www.javatpoint.com/html-web-workers');
+                if (response) {
+                    // If the resource is found in the cache, log its content
+                    const text = await response.text();
+                    console.log('Cached resource content:', text.slice(0, 2000));  // Just log the first 200 characters
+                } else {
+                    console.log('Resource not found in the cache.');
+                }
+            } catch (error) {
+                console.error('Error accessing cache:', error);
+            }
+        }
+
+        // Trigger the cacheExample function when the button is clicked
+        document.getElementById('cacheButton').addEventListener('click', cacheExample);
+    </script>
+
+</body>
+</html>
