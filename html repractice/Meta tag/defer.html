@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async vs Defer Example</title>
+
+    <!-- Async script -->
+    <script src="async-script.js" async></script>
+
+    <!-- Defer script -->
+    <script src="defer-script.js" defer></script>
+
+    <!-- Default script (blocks HTML parsing) -->
+    <script src="default-script.js"></script>
+
+</head>
+<body>
+    <h1>Async vs Defer vs Default Script</h1>
+    <p>Check the console to see the execution order of scripts.</p>
+
+    <button onclick="showMessage()">Click Me</button>
+</body>
+</html>

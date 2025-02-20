@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test the media query</title>
+    <style>
+      p {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+    <style media="all and (max-width: 500px)">
+      p {
+        color: rgb(179, 180, 92);
+        background-color: rgb(40, 185, 166);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.mozilla.org/en-US/about/manifesto/">
+        Mozilla Manifesto
+      </a>
+      
+    <p>This is the example of style attribute using media</p>
+  </body>
+</html>

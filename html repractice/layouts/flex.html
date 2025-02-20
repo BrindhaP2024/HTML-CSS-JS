@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap and Grow Example</title>
+    <style>
+        .flex {
+            display: flex;
+            flex-wrap:wrap; 
+            justify-content: center;
+            align-items: flex-start;
+        
+            border: 5px solid springgreen;           
+            padding: 50px;
+            gap: 20px; 
+        }
+
+        .flex1, .flex2, .flex3 {
+            padding: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: dodgerblue;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            flex-grow: 1; 
+        }
+
+        .flex2 {
+            color: aqua;
+            background-color: blueviolet;
+            flex-grow: 2; 
+            flex-shrink:3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="flex1">ONE</div>
+        <div class="flex2">TWO</div>
+        <div class="flex3">THREE</div>
+        <div class="flex1">ONE</div>
+        <div class="flex2">TWO</div>
+        <div class="flex3">THREE</div>
+        <div class="flex1">ONE</div>
+        <div class="flex2">TWO</div>
+        <div class="flex3">THREE</div>
+    </div>
+</body>
+</html>

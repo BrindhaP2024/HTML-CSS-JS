@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Shrink Example</title>
+    <style>
+        .container {
+            display: flex;
+            width: 300px;
+            border: 2px solid black;
+        }
+
+        .item {
+            width: 200px; /* Each item is 200px */
+            padding: 10px;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        .item:nth-child(1) {
+            flex-shrink: 1;
+        }
+
+        .item:nth-child(2) {
+            flex-shrink: 2;
+            background-color: coral;
+        }
+
+        .item:nth-child(3) {
+            flex-shrink: 0; /* Won't shrink */
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2 (Shrinks 2x)</div>
+        <div class="item">Item 3 (No Shrink)</div>
+    </div>
+
+</body>
+</html>

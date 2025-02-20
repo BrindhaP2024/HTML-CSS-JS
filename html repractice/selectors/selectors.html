@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Examples</title>
+  <style>
+    * {
+      font-family: Arial, sans-serif;
+      color: #c51818;
+    }
+
+    p {
+      color: blue;
+    }
+
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+
+    #special-text {
+      font-size: 1.5em;
+      color: green;
+    }
+
+    a[href^="https"] {
+      color: red;
+    }
+
+    h1, h2 {
+      font-family: 'Arial', sans-serif;
+    }
+
+    div p {
+      color: orange;
+    }
+  
+    div > p {
+      color: purple;
+    }
+/* subsequent sibling combinator */
+    h1 ~ p {
+      font-style: italic;
+    }
+/* sibling selector */
+    h1 + p { 
+      color: teal;
+    }
+
+    a:hover {
+      color: blue;
+    }
+
+    p::first-letter {
+      font-size: 2em;
+      color: darkred;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Website</h1>
+
+  <p class="highlight">This text is highlighted with yellow and bold.</p>
+
+  <p id="special-text">This text is larger and green.</p>
+
+  <a href="https://www.example.com">Go to a secure site</a>
+
+  <div>
+    <p>This text inside a div is orange.</p>
+  </div>
+
+  <div>
+    <p>This text is a direct child of a div and is purple.</p>
+  </div>
+
+  <h1>Next Section</h1>
+  <p>This text is italicized after the h1 heading.</p>
+
+  <h1>Last Section</h1>
+  <p>This text is teal after the h1 heading.</p>
+
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Hover over me to change color.</a>
+
+  <p>The first letter here is larger and dark red.</p>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form action="" method="POST" enctype="multipart/form-data" id="registrationForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required placeholder="Enter your username">
+    <p><small>This field is required.</small></p>
+
+    <!-- Password Input -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required placeholder="Enter your password">
+    <p><small>Password must be at least 8 characters long.</small></p>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+    <p><small>Must be a valid email address.</small></p>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="^\+?[1-9]\d{1,14}$">
+    <p><small>Phone number should be in international format (e.g., +1234567890).</small></p>
+
+    <label for="age">Age (Required):</label>
+    <input type="number" id="age" name="age" required min="18" max="100" placeholder="Enter your age">
+    <p><small>Age should be between 18 and 100.</small></p>
+
+    <label for="profile_picture">Upload Profile Picture:</label>
+    <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+    <p><small>Only image files are accepted.</small></p>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
