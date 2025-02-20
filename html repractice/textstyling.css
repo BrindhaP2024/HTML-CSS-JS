@@ -1,0 +1,42 @@
+/* Web Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Text Styling */
+.styled-text {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+}
+
+/* List Styling */
+.styled-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.styled-list li {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.styled-link {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.styled-link:hover {
+    color: red;
+    text-decoration: underline;
+}
