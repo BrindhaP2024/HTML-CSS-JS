@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark & Light Mode Without classList</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dark & Light Mode Toggle</h1>
+    <button id="toggleTheme">Toggle Theme</button>
+
+    <script>
+        //Check Local Storage for Theme Preference
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "dark") {
+            document.body.style.backgroundColor = "#222";
+            document.body.style.color = "white";
+        }
+
+        document.getElementById("toggleTheme").addEventListener("click", function () {
+            if (document.body.style.backgroundColor === "rgb(34, 34, 34)") { // Dark Mode Check
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                localStorage.setItem("theme", "light");
+            } else {
+                document.body.style.backgroundColor = "#222";
+                document.body.style.color = "white";
+                localStorage.setItem("theme", "dark");
+            }
+        });
+    </script>
+
+</body>
+</html>

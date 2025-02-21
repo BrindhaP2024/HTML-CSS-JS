@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage Example</title>
+</head>
+<body>
+
+    <h1>Session Storage Demo</h1>
+
+    <label for="nameInput">Enter Your Name:</label>
+    <input type="text" id="nameInput" placeholder="Type your name">
+    <button id="saveBtn">Save Name</button>
+    
+    <h2>Stored Name: <span id="displayName">None</span></h2>
+
+    <script>
+
+        const savedName = sessionStorage.getItem("username");
+        if (savedName) {
+            document.getElementById("displayName").textContent = savedName;
+        }
+
+        document.getElementById("saveBtn").addEventListener("click", function () {
+            const name = document.getElementById("nameInput").value;
+            sessionStorage.setItem("username", name);
+            document.getElementById("displayName").textContent = name;
+        });
+    </script>
+
+</body>
+</html>

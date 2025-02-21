@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow DOM Example</title>
+</head>
+<body>
+  <div id="hostElement">This is the host element.</div>
+  <div id="host1"> THis is warning</div>
+
+  <script>
+    const hostt = document.getElementById('host1');
+    const shadow = hostt.attachShadow({mode:"closed"});
+
+    const hostElement = document.getElementById('hostElement');
+
+    const shadowRoot = hostElement.attachShadow({ mode: 'open' });
+
+    shadowRoot.innerHTML = `
+      <style>
+        p {
+          color: blue;
+          font-weight: bold;
+        }
+      </style>
+      <p>This is inside the shadow DOM.</p>
+    `;
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Z-Index Fix</title>
+    <style>
+        .box {
+            width: 200px; height: 100px; position: absolute;
+        }
+        .first {
+             background: red; 
+             top: 50px; 
+             left: 50px; 
+             z-index: 3; 
+            }
+        .second { 
+            background: blue; 
+            top: 70px; 
+            left: 70px; 
+            z-index: 3; }
+    </style>
+</head>
+<body>
+    <div class="box first">First Box</div>
+    <div class="box second">Second Box</div>
+</body>
+</html>

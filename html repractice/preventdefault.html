@@ -1,0 +1,8 @@
+<a href="https://www.edureka.co/blog/javascript-cookies/" id="myLink">Click Me</a>
+
+<script>
+    document.getElementById("myLink").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevents going to Google
+        alert("Navigation prevented!");
+    });
+</script>

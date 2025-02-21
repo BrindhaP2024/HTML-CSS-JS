@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop</title>
+  <style>
+    #dragElement {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 50px;
+      cursor: pointer;
+      text-align: center;
+      line-height: 100px;
+    }
+    #dropZone {
+      width: 200px;
+      height: 200px;
+      background-color: lightgreen;
+      border: 2px dashed rgb(224, 227, 224);
+      margin-top: 50px;
+      text-align: center;
+      line-height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="dragElement" draggable="true">Drag Me</div>
+  <div id="dropZone">Drop Here</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
