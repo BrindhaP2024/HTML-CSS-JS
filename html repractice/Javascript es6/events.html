@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Example</title>
+    <style>
+        #hoverDiv {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 200px;
+            margin: 10px;
+        }
+        #resizeDiv {
+            width: 100%;
+            height: 100px;
+            background-color: lightgrey;
+            text-align: center;
+            line-height: 100px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript Event Examples</h2>
+
+    <!-- Click Event -->
+    <button id="myButton">Click Me!</button>
+
+    <br><br>
+
+    <!-- Mouseover Event -->
+    <div id="hoverDiv">Hover over me!</div>
+
+    <br><br>
+
+    <!-- Keypress Event -->
+    <input type="text" id="inputField" placeholder="Type something">
+
+    <br><br>
+
+    <!-- Submit Event -->
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <br><br>
+
+    <!-- Focus and Blur Event -->
+    <input type="text" id="focusInput" placeholder="Click to focus">
+
+    <br><br>
+
+    <!-- Change Event -->
+    <select id="dropdown">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="cherry">Cherry</option>
+    </select>
+
+    <br><br>
+
+    <!-- Resize Event -->
+    <div id="resizeDiv">Resize the window!</div>
+
+    <br><br>
+
+    <!-- Input Event -->
+    <input type="text" id="inputChange" placeholder="Type to see input event">
+
+    <script>
+        // Click Event
+        const button = document.getElementById('myButton');
+        button.addEventListener('click', function() {
+            alert('Button was clicked!');
+        });
+
+        // Mouseover Event
+        const hoverDiv = document.getElementById('hoverDiv');
+        hoverDiv.addEventListener('mouseover', function() {
+            hoverDiv.style.backgroundColor = 'lightgreen';
+        });
+        hoverDiv.addEventListener('mouseout', function() {
+            hoverDiv.style.backgroundColor = 'lightblue';
+        });
+
+        // Keypress Event
+        const inputField = document.getElementById('inputField');
+        inputField.addEventListener('keypress', function(event) {
+            console.log('Key pressed: ' + event.key);
+        });
+
+        // Submit Event
+        const form = document.getElementById('myForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting
+            alert('Form has been submitted!');
+        });
+
+        // Focus and Blur Event
+        const focusInput = document.getElementById('focusInput');
+        focusInput.addEventListener('focus', function() {
+            console.log('Input field focused');
+        });
+        focusInput.addEventListener('blur', function() {
+            console.log('Input field lost focus');
+        });
+
+        // Change Event
+        const dropdown = document.getElementById('dropdown');
+        dropdown.addEventListener('change', function() {
+            alert('You selected: ' + dropdown.value);
+        });
+
+        // Resize Event
+        window.addEventListener('resize', function() {
+            console.log('Window resized! Current dimensions: ', window.innerWidth, 'x', window.innerHeight);
+        });
+
+        // Input Event
+        const inputChange = document.getElementById('inputChange');
+        inputChange.addEventListener('input', function(event) {
+            console.log('Current input: ' + event.target.value);
+        });
+    </script>
+
+</body>
+</html>
