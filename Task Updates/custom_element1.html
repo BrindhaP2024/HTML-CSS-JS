@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Element without Shadow DOM</title>
+</head>
+<body>
+    <custom-paragraph-element></custom-paragraph-element>
+
+    <script>
+        class CustomParagraphElement extends HTMLElement {
+            constructor() {
+                super();
+                const p = document.createElement('p');
+                p.textContent = 'This is a custom paragraph with underline, italic, and red color.';
+                p.style.textDecoration = 'underline';
+                p.style.fontStyle = 'italic';
+                p.style.color = 'red';
+                this.appendChild(p);
+            }
+        }
+
+        customElements.define('custom-paragraph-element', CustomParagraphElement);
+    </script>
+</body>
+</html>
